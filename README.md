@@ -23,7 +23,7 @@ It is movement across dimensions, under uncertainty, with feedback.
 
 # Repository structure
 
-The repository is split into three conceptual layers, two of which are currently implemented.
+This repository is intentionally structured by **stability and intent**, not by implementation.
 
 ```
 thinking-model-spec/
@@ -37,14 +37,30 @@ thinking-model-spec/
 └── README.md
 ```
 
-## 1. vision/
+### vision/
 
+The most exploratory part of the repo.
 High-level framing and distilled insights that shape the system.
 * Why this exists
 * What problem it addresses
 * How it differs from traditional “teaching systems”
 
 This is _philosophy_ made operational.
+
+- `synthesis.md`  
+  A living snapshot of what is currently understood.  
+  It is periodically rewritten, not appended to.
+
+- `methodology/`  
+  How insights in this repo are produced and validated  
+  (e.g. AI-assisted simulation, low-fidelity prototyping).
+
+- `plans/`  
+  Possible futures, split by scope and certainty  
+  (near-term, exploratory, long-term).  
+  These are **not commitments**.
+
+Expect high churn here.
 
 ## 2. system/ (domain-agnostic)
 
