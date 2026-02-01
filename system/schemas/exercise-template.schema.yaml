@@ -1,0 +1,29 @@
+# Exercise Template Schema (v0.1)
+
+$schema_id: exercise-template.schema.v0.1
+$schema_version: 0.1.0
+
+exercise_template:
+  id: string
+
+  target_concepts: [string]       # concept ids
+  target_levels: [string]         # e.g. [L1, L2]
+
+  expected_motifs: [string]       # motif ids
+  bypass_motifs: [string]
+
+  intent: string                  # what it is meant to surface
+  anti_goals: [string]            # what it must NOT allow
+
+  # Optional: generator constraints
+  constraints:
+    allowed_variations: [string]
+    forbidden_concepts: [string]  # not-yet-seen
+
+  outputs:
+    traces: [string]              # what trace signals are expected
+
+  metadata:
+    status: string
+    version: string
+

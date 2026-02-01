@@ -1,0 +1,25 @@
+# Acquisition Motif Schema (v0.1)
+
+$schema_id: acquisition-motif.schema.v0.1
+$schema_version: 0.1.0
+
+acquisition_motif:
+  id: string                      # M1, M2, ...
+  name: string
+  gesture: string                 # learner-voice description of the move
+
+  description: string             # short explanatory paragraph
+
+  appears_in:
+    - domain: string
+      example: string
+
+  failure_modes:
+    - description: string
+
+  detection_signals:
+    - pattern: string
+      context: string             # exercise | dialogue | code | navigation
+
+  pedagogical_stance: string      # how the system should respond
+

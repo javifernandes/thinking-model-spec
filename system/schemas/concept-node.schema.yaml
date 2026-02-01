@@ -1,0 +1,100 @@
+# Concept Node Schema (v0.1)
+#
+# Format: YAML (human-authored). Validation tooling (e.g. JSON Schema) can be added later.
+# This is a *schema spec*, not an implementation type system.
+
+$schema_id: concept-node.schema.v0.1
+$schema_version: 0.1.0
+
+concept_node:
+  # === IDENTITY (required) ===
+  id: string                      # Stable identifier, e.g. "hof.core"
+  name: string                    # Canonical human name
+  domain: string                  # Primary domain label (programming, math, physics, language, ...)
+
+  # === SUMMARY (required) ===
+  short_description: string       # One paragraph essence (not full explanation)
+
+  # === ROLE / KIND (optional but recommended) ===
+  concept_type: string            # e.g. abstraction | pattern | anti-pattern | boundary | invariant
+  domain_tags: [string]           # Additional domains/tags
+  level: number                   # Relative conceptual depth (ordinal)
+
+  # === INTENT (required) ===
+  intent:
+    why_it_exists: string         # Cognitive leverage
+    threshold: string             # What changes once this is owned
+
+  # === ACQUISITION (required) ===
+  acquisition:
+    mode: string                  # binary | graded
+    # Only if mode == graded
+    levels:
+      - id: string                # L0, L1, ... (concept-specific allowed)
+        label: string
+        description: string
+
+  # === PREREQUISITES (optional) ===
+  prerequisites:
+    explicit: [string]            # concept ids
+    experiential: [string]        # descriptions of needed felt experiences
+
+  # === CORE MEANING (optional) ===
+  meaning:
+    definition: string            # concise formal-enough statement
+    informal_frames: [string]     # metaphors / narratives
+
+  # === RECOGNITION (optional but central) ===
+  implicit_mastery_signals:
+    - pattern: string             # detectable shape/behavior
+      description: string
+  pre_name_usage_patterns: [string]
+
+  # === RELATIONS (optional) ===
+  relations:
+    prerequisites: [string]       # soft edges in the concept graph
+    enables: [string]
+    related_concepts: [string]
+
+  # === MISAPPLICATION (open world; optional) ===
+  misapplication_patterns:
+    - id: string
+      description: string
+      detection_signals: [string]
+      provenance: string          # author | system | community
+      confidence: string          # provisional | validated | deprecated
+      # Optional: axis that is typically confused/violated
+      axis_violation: string
+
+  # === TENSIONS (optional) ===
+  tension_signals: [string]
+
+  # === EXERCISES (optional) ===
+  exercise_archetypes:
+    - id: string
+      intent: string
+      target_levels: [string]
+      expected_motifs: [string]   # motif ids
+      bypass_motifs: [string]
+      anti_goals: [string]
+
+  # === VISUALIZATION (optional) ===
+  visualization_hooks:
+    - id: string
+      description: string
+
+  # === SYSTEM HOOKS (optional) ===
+  system_hooks:
+    tutor_triggers: [string]
+    assessment_signals: [string]
+
+  # === TRACEABILITY / EVOLUTION (required-ish for v0.1) ===
+  metadata:
+    status: string                # draft | stable | deprecated
+    version: string               # e.g. 0.1.0
+    source_references: [string]   # book sections, lectures, etc.
+    change_log:
+      - at: string                # timestamp or date
+        change: string
+        source_of_change: string  # author | system feedback | learner behavior
+

@@ -1,0 +1,28 @@
+# Feedback Event Schema (v0.1)
+
+$schema_id: feedback-event.schema.v0.1
+$schema_version: 0.1.0
+
+feedback_event:
+  timestamp: string
+
+  event_type: string              # antipattern | confusion | insight | shortcut | misnaming | recognition | leap
+  signal: string
+
+  concepts_involved: [string]     # concept ids
+
+  context:
+    kind: string                  # exercise | dialogue | navigation | free-exploration
+    ref: string                   # optional pointer/id
+
+  source: string                  # learner | ai_tutor | aggregate | author
+
+  confidence: number              # 0..1
+  frequency: number               # optional: aggregation count
+
+  evidence:
+    - kind: string                # code-snippet | dialogue-turn | navigation-trace
+      content: string
+
+  suggested_author_actions: [string]  # promote-to-model | promote-to-book | promote-to-exercise | ignore | archive
+

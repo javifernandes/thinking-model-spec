@@ -1,0 +1,32 @@
+# Concept Family Schema (v0.1)
+
+$schema_id: concept-family.schema.v0.1
+$schema_version: 0.1.0
+
+concept_family:
+  id: string
+  description: string
+
+  # Members are concept ids or family-local names (v0.1 allows either; prefer concept ids).
+  members: [string]
+
+  # Axes define the dimensions of variation within the family.
+  axes:
+    - id: string                  # intent | time | ownership | semantic-weight | ...
+      description: string
+      values: [string]            # optional enumeration of typical values
+
+  # Shared motifs commonly activated when learners engage this family.
+  shared_motifs: [string]         # motif ids (M1...)
+
+  # Optional: canonical confusions inside the family
+  typical_misapplications:
+    - chosen: string
+      expected: string
+      axis_confused: string
+      description: string
+
+  metadata:
+    status: string                # draft | stable | deprecated
+    version: string
+
