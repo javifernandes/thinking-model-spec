@@ -1,0 +1,76 @@
+# Concept Bindings: hof.core (v0.1)
+#
+# This file binds a concrete concept node to:
+# - concept families
+# - axes of variation
+# - acquisition motifs
+# - recognition / misapplication signals
+#
+# Decision (v0.1): bindings live in separate files so they can be inspected/queried
+# without needing to parse the concept node prose itself.
+
+$schema_id: concept-node.bindings.v0.1
+$schema_version: 0.1.0
+
+bindings:
+  concept_id: hof.core
+
+  # Families the concept participates in.
+  families:
+    - family_id: behavioral-abstraction
+      role: behavior-as-value
+
+  # Axes that commonly matter for this concept (used for diagnosing near-misses).
+  axes_emphasized:
+    - how               # behavior selection / variation injection
+    - where             # binding site / injection point
+    - semantic-weight   # declarative vs imperative emphasis
+
+  # Motifs that frequently appear when learners acquire this concept.
+  motifs:
+    expected:
+      - M1   # Structural Separation
+      - M2   # Interpretation Instead of Reification
+      - M8   # Over-Application (post-success boundary learning)
+    bypass:
+      - M3   # Overfitting to the Prompt
+      - M6   # Lateral Substitution
+
+  # Neighbor concepts used to explain substitutions / confusions.
+  neighbors:
+    - strategy
+    - predicate
+    - callback
+
+  # Misapplication patterns associated with this concept.
+  misapplication_patterns:
+    - id: branching-on-type
+      axis_violation: how
+      description: Behavior selection encoded via control flow (if/else on "mode")
+      detection_signals:
+        - if/else on player type
+        - switch/case on "strategy" enum
+
+    - id: flag-explosion
+      axis_violation: how
+      description: Multiple boolean/enum flags to modulate behavior in one function
+      detection_signals:
+        - function signature grows with flags over time
+        - nested conditionals that select behavior
+
+    - id: premature-naming
+      axis_violation: semantic-weight
+      description: Naming the abstraction before the learner has perceived what varies
+      detection_signals:
+        - learner asks "what does this parameter mean?" repeatedly
+        - learner uses parameter but cannot predict effect
+
+  # Recognition signals (used to detect implicit mastery before naming).
+  implicit_mastery_signals:
+    - pattern: learner passes behavior as data
+      description: A function is passed/returned/stored as a value to control variation
+    - pattern: stable engine + injected variation
+      description: Core process remains unchanged while behavior varies by parameter
+    - pattern: composition without branching
+      description: Learner combines behaviors rather than enumerating cases
+

@@ -1,4 +1,9 @@
 # Acquisition Motif Schema (v0.1)
+#
+# IMPORTANT DISTINCTION
+# - This schema describes a *motif definition* (M1, M2, ...) as a stable catalog item.
+# - A runtime system would emit *events* when a motif is detected; those are modeled via
+#   the feedback-event schema (and may include references to motif ids).
 
 $schema_id: acquisition-motif.schema.v0.1
 $schema_version: 0.1.0
@@ -22,4 +27,8 @@ acquisition_motif:
       context: string             # exercise | dialogue | code | navigation
 
   pedagogical_stance: string      # how the system should respond
+
+  # Optional: links to other stable IDs.
+  related_axes: [string]          # e.g. intent, time, ownership, semantic-weight
+  related_families: [string]      # family ids
 

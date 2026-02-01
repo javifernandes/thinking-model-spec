@@ -11,6 +11,9 @@ feedback_event:
 
   concepts_involved: [string]     # concept ids
 
+  # Optional: detected motifs (references into the motif catalog, e.g. M2, M8).
+  motifs_detected: [string]
+
   context:
     kind: string                  # exercise | dialogue | navigation | free-exploration
     ref: string                   # optional pointer/id
@@ -25,4 +28,3 @@ feedback_event:
       content: string
 
   suggested_author_actions: [string]  # promote-to-model | promote-to-book | promote-to-exercise | ignore | archive
-
