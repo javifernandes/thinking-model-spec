@@ -1,0 +1,14 @@
+probe:
+  id: probe-001-hof-delegation
+  type: author-to-learner
+  intent: >
+    Validate the end-to-end flow from authored text about delegation
+    (via higher-order functions) to learner exercise and signal detection.
+  status: exploratory
+  related_concepts:
+    - hof.core
+    - delegation
+  methodology:
+    - manual extraction
+    - simulated learner attempt
+    - manual signal detection

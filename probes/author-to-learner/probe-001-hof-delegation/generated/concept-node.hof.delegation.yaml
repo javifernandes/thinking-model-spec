@@ -1,0 +1,52 @@
+concept_node:
+  id: hof.delegation
+  name: Delegation via Higher-Order Functions
+  domain: programming
+
+  short_description: >
+    Using functions as parameters to delegate decisions or behavior
+    instead of encoding them in control flow or object structure.
+
+  concept_type: pattern
+  level: 3
+
+  intent:
+    why_it_exists: >
+      Reduce coupling and premature commitment by externalizing behavior.
+    threshold: >
+      You stop asking “which branch?” and start asking
+      “who decides, and when?”
+
+  acquisition:
+    mode: graded
+    levels:
+      - id: L1
+        label: Mechanical usage
+        description: Passing a function without understanding why.
+      - id: L2
+        label: Intentional delegation
+        description: Choosing delegation to avoid branching.
+      - id: L3
+        label: Design leverage
+        description: Using delegation to shape system evolution.
+
+  prerequisites:
+    explicit:
+      - function.basic
+    experiential:
+      - frustration with conditional logic growth
+
+  misapplication_patterns:
+    - id: MP-branching-on-type
+      description: Using conditionals instead of delegation.
+      detection_signals:
+        - multiple branches selecting behavior
+      provenance: system
+      confidence: validated
+      axis_violation: semantic-weight
+
+  metadata:
+    status: draft
+    version: 0.1.0
+    source_references:
+      - Programming Core Thoughts, Delegation section

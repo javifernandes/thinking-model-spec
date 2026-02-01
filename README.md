@@ -21,85 +21,61 @@ thinking-model-spec describes:
 Learning is not binary acquisition.
 It is movement across dimensions, under uncertainty, with feedback.
 
-# Repository structure
+## How This Repository Is Structured
 
-This repository is intentionally structured by **stability and intent**, not by implementation.
-
-```
-thinking-model-spec/
-│
-├── vision/        # Philosophy, guiding insights, long-term intent
-│
-├── system/        # Domain-agnostic meta-model (the core spec)
-│
-├── books/         # Concrete instantiations of the system (examples)
-│
-└── README.md
-```
+This repository is organized by **conceptual role and stability**, not by implementation.
 
 ### vision/
+Meta-level material:
+- how we think about the problem
+- how insights are generated
+- reflective synthesis
+- methodologies (including probes)
+- future horizons
 
-The most exploratory part of the repo.
-High-level framing and distilled insights that shape the system.
-* Why this exists
-* What problem it addresses
-* How it differs from traditional “teaching systems”
-
-This is _philosophy_ made operational.
-
-- `synthesis.md`  
-  A living snapshot of what is currently understood.  
-  It is periodically rewritten, not appended to.
-
-- `methodology/`  
-  How insights in this repo are produced and validated  
-  (e.g. AI-assisted simulation, low-fidelity prototyping).
-
-- `plans/`  
-  Possible futures, split by scope and certainty  
-  (near-term, exploratory, long-term).  
-  These are **not commitments**.
-
-Expect high churn here.
-
-## 2. system/ (domain-agnostic)
-
-The core specification, reusable across domains (programming, math, physics, language, etc.).
-
-Includes:
-
-* Concept Nodes
-  * schemas, bindings, lifecycle
-* Concept Families & Axes
-  * how similar abstractions differ by intent, time, ownership, semantics
-* Acquisition Motifs
-  * recurring ways humans grasp ideas
-* Exercise Templates
-  * how exercises surface understanding and misalignment
-* Feedback Space
-  * how learner behavior becomes signal for authors
-* Subsystems Overview
-  * how UI, analytics, and generation fit together (at a high level)
-
-Nothing here is specific to programming.
-
-## 3. books/ (system instances)
-
-Concrete example instantiations of the system.
-
-Currently included:
-* programming-core-thoughts/
-  * a first example book
-  * used as a working laboratory to stress-test the model
-
-This contains:
-* concept nodes (e.g. Higher-Order Functions)
-* chapter-level material
-* early examples and exercises
-
-These files are **not normative** — they are exploratory and expected to evolve.
+This folder is intentionally volatile.
+This is the meta-level (and this README you are reading is the meta-meta level :P)
 
 ---
+
+### system/
+Domain-agnostic specifications:
+- concept models
+- learning dynamics
+- feedback mechanisms
+- subsystems and schemas
+
+This is the formal core of the project.
+This is the model of a learning/authoring experience. Describes it.
+
+---
+
+### books/
+Concrete domain instances of the system:
+- programming
+- math
+- other future domains
+
+These contain instances of system concepts, not the system itself.
+
+---
+
+### probes/
+Experimental, disposable artifacts used to **stress the model**.
+
+Probes simulate real learning and authoring experiences without committing to:
+- tooling
+- UI
+- persistence
+- architecture
+
+Probes exist to generate insight, not correctness.
+They may be archived or deleted at any time.
+
+---
+
+> If you are new: start in `vision/synthesis.md`, then read `system/`, then look at one probe.
+
 
 # What this repo is not (yet)
 
