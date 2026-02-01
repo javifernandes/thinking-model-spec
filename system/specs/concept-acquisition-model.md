@@ -1,5 +1,7 @@
 # Concept Acquisition Model (Domain-Independent)
 
+<!-- (v0.1 scaffold) Moved under `system/specs/` -->
+
 > This specification defines **how concepts are learned**, independent of domain.
 > It is reusable across programming, math, physics, language, and beyond.
 

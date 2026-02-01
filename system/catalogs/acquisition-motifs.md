@@ -1,5 +1,7 @@
 # Acquisition Motifs
 
+<!-- (v0.1 scaffold) Moved under `system/catalogs/` -->
+
 > **Purpose:** Identify recurring *cognitive moves* learners make while acquiring concepts.
 > Motifs are **domain-independent**, **concept-agnostic**, and **observable in action**.
 

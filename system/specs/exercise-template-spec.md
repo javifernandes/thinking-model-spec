@@ -1,5 +1,7 @@
 # Exercise Template Specification
 
+<!-- (v0.1 scaffold) Moved under `system/specs/` -->
+
 > **Subsystem:** Exercise Engine
 > **Purpose:** Define exercises as *cognitive provocations*, not questions.
 

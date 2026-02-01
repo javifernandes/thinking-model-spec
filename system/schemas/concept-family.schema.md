@@ -1,5 +1,7 @@
 # Concept Families & Axes of Variation (Schema)
 
+<!-- (v0.1 scaffold) Moved under `system/schemas/` (YAML schema to follow) -->
+
 > This schema generalizes **learning beyond individual concepts**.
 > It models how related abstractions cluster, diverge, and compete.
 

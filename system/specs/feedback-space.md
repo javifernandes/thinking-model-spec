@@ -1,5 +1,7 @@
 # Feedback Space (Meta-System Sketch)
 
+<!-- (v0.1 scaffold) Moved under `system/specs/` -->
+
 > **Layer:** System / Learning Loop
 >
 > The Feedback Space is an append-only knowledge layer where *emergent understanding* is recorded.

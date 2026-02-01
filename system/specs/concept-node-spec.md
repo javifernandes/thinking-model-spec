@@ -1,5 +1,7 @@
 # Concept Node Specification
 
+<!-- (v0.1 scaffold) Moved under `system/specs/` -->
+
 > This document defines the **Concept Node**: the atomic unit of meaning in the system.
 > A concept node is *not* a lesson, a chapter, or an exercise.
 > It is a **cognitive construct**, designed to be recognized, exercised, misused, and refined over time.

@@ -1,5 +1,7 @@
 # Feedback Space Specification
 
+<!-- (v0.1 scaffold) Moved under `system/specs/` -->
+
 > **Subsystem:** Feedback Space
 > **Nature:** Emergent, append-only, author-facing
 

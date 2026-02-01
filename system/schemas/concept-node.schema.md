@@ -1,5 +1,7 @@
 # Concept Node Schema (Generic)
 
+<!-- (v0.1 scaffold) Moved under `system/schemas/` (YAML schema to follow) -->
+
 > **Layer:** System / Meta-model
 >
 > This schema defines the minimal and extensible structure of a *concept node*.

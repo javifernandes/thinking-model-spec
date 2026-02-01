@@ -1,5 +1,7 @@
 # Concept Node Bindings
 
+<!-- (v0.1 scaffold) Moved under `system/bindings/` -->
+
 > **Purpose:** Bind individual concept nodes to families, axes, motifs, and detection rules.
 
 This layer connects:

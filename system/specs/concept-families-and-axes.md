@@ -1,5 +1,7 @@
 # Concept Families and Axes of Variation
 
+<!-- (v0.1 scaffold) Moved under `system/specs/` -->
+
 > **Purpose:** Explain why closely related concepts are confused, substituted, or over-applied — and make that confusion *useful*.
 
 ---
