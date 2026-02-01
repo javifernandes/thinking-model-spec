@@ -1,0 +1,148 @@
+# Concept Node: Higher-Order Functions (hof.core)
+# Canonical v0.1 reference example (“golden path”)
+
+$schema_id: concept-node.instance.v0.1
+$schema_ref: ../../../../system/schemas/concept-node.schema.yaml
+
+concept_node:
+  id: hof.core
+  name: Higher-Order Functions
+  domain: programming
+
+  short_description: >
+    Behavior can be treated as data: passed, returned, stored, and combined.
+    This separates stable structure (an engine/process) from the varying part
+    (a strategy/rule), enabling reuse, composition, and clearer intent.
+
+  concept_type: abstraction
+  domain_tags:
+    - programming-abstractions
+    - functional
+    - design
+  level: 3
+
+  intent:
+    why_it_exists: >
+      To give the learner leverage over variation: instead of encoding choices
+      as flags or branches, treat behavior itself as an explicit manipulable value.
+    threshold: >
+      Once owned, the learner can design “stable engines” that accept behavior,
+      recognize duplication-as-variation, and replace case explosions with composition.
+
+  acquisition:
+    mode: graded
+    levels:
+      - id: L0
+        label: unseen
+        description: >
+          Has not encountered situations where abstracting over behavior is salient.
+      - id: L1
+        label: structural separation (interpreted variation)
+        description: >
+          Separates stable from variable parts, but encodes variation as data
+          (modes/enums/flags) and interprets it later.
+      - id: L2
+        label: behavior as value (core)
+        description: >
+          Passes/returns/stores functions as values; the engine becomes agnostic
+          to the strategy.
+      - id: L3
+        label: fluent composition
+        description: >
+          Uses map/filter/reduce naturally; combines behaviors and abstracts
+          over multiple axes when needed.
+      - id: L4
+        label: transfer / reflection
+        description: >
+          Recognizes the concept across domains and can explain why the abstraction
+          works and where it does not.
+
+  prerequisites:
+    explicit: []
+    experiential:
+      - Functions as named transformations
+      - Basic composition (output feeds input)
+      - Collections/sequences (implicit or explicit)
+      - Control flow (conditionals, loops)
+
+  meaning:
+    definition: >
+      A higher-order function is a function that takes one or more functions as input
+      and/or returns a function as output, allowing behavior to be parameterized and composed.
+    informal_frames:
+      - Stable engine + injected strategy
+      - Verbs as data
+      - Delegation of “how” to a supplied behavior
+
+  implicit_mastery_signals:
+    - pattern: stable engine + injected variation
+      description: Learner keeps process structure stable and varies behavior via a parameter.
+    - pattern: behavior passed as data
+      description: Learner passes/returns/stores a function value to control variation.
+    - pattern: composition without branching
+      description: Learner combines behaviors instead of enumerating cases with conditionals.
+
+  pre_name_usage_patterns:
+    - Duplicated logic differing only by a small rule
+    - Parameterizing behavior with flags/modes
+    - Choosing between strategies at runtime
+
+  relations:
+    prerequisites: []
+    enables:
+      - delegation.core
+      - composition.core
+    related_concepts:
+      - strategy.pattern
+      - predicate.pattern
+      - callback.pattern
+      - partial-application.core
+
+  exercise_archetypes:
+    - id: E1.refactor-duplication
+      intent: Extract varying behavior from duplicated logic into a parameter.
+      target_levels: [L1, L2]
+      expected_motifs: [M1, M2]
+      bypass_motifs: [M3, M6]
+      anti_goals:
+        - Solvable by hardcoding outcomes
+        - Solvable by adding more flags
+    - id: E2.strategy-injection
+      intent: Keep an engine stable while plugging multiple behaviors into it.
+      target_levels: [L2]
+      expected_motifs: [M1]
+      bypass_motifs: [M3]
+      anti_goals:
+        - Solvable by if/else on "strategy type"
+    - id: E3.behavior-discovery
+      intent: Let learner solve; system detects latent HOF usage and names it retroactively.
+      target_levels: [L1, L2]
+      expected_motifs: [M7]
+      bypass_motifs: [M6]
+      anti_goals:
+        - Exercise forces the name before recognition
+
+  visualization_hooks:
+    - id: pipeline-with-injected-node
+      description: Show a stable pipeline with a highlighted injected behavior node.
+    - id: contrast-branching-vs-composition
+      description: Visual contrast between case-analysis trees and compositional chains.
+
+  system_hooks:
+    tutor_triggers:
+      - Learner introduces mode enums / flag parameters to vary behavior (potential M2)
+      - Learner repeats near-identical code blocks differing only by a small rule
+    assessment_signals:
+      - Motif distribution over attempts (M2→M1→L2 transition)
+      - Frequency of branching-on-type near-miss pattern (axis confusion)
+
+  metadata:
+    status: draft
+    version: 0.1.0
+    source_references:
+      - thinking-model-spec/books/programming-core-thoughts/concepts/concept-node-higher-order.md
+    change_log:
+      - at: 2026-02-01
+        change: Converted the HOF concept node from prose to canonical YAML example.
+        source_of_change: author
+
