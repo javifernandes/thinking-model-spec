@@ -138,6 +138,50 @@ Signals:
 
 ---
 
+### M7 — Delayed Insight
+
+**Gesture:**
+
+> "I didn't get it then, but now I see."
+
+Appears as:
+
+* revisiting earlier material with a new frame
+* later concepts illuminating earlier ones
+* recognition happening *after* the original teaching moment
+
+System implications:
+
+* treat as a **success signal** (retroactive ownership)
+* capture *what caused the unlock* (which example, which hint, which contrast)
+* consider promoting the trigger into:
+  * a better exercise
+  * a tighter contrast
+  * a better naming moment
+
+---
+
+### M8 — Over-Application
+
+**Gesture:**
+
+> "This worked before, so I'll use it everywhere."
+
+Appears as:
+
+* a recently learned abstraction applied outside its useful boundary
+* unnecessary complexity justified by familiarity
+* "hammer sees nails" behavior after a first success
+
+System implications:
+
+* interpret as **concept activation + missing boundary awareness**
+* respond by surfacing the **axis of variation / intent boundary**
+* log as a potential signal that the learner is transitioning from:
+  * L2 (core ownership) → L3 (fluent selection)
+
+---
+
 ## 4. Motifs Are Not Errors
 
 Motifs:
