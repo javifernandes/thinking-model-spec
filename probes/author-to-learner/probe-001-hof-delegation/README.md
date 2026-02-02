@@ -37,4 +37,14 @@ This probe is an **instance** of the probing methodology described in `/vision/m
 Completed (manual simulation)
 
 ## Outcomes
-See `insights.md`.
+ See `reflection/insights.md`.
+
+## Folder structure (probe layers)
+
+- `source/` — author inputs
+- `evidence/` — raw learner evidence
+- `derived/` — structured outputs (YAML)
+- `reflection/` — human synthesis and promotion notes
+
+> Note: The legacy `generated/` folder was removed.
+> The probe contract is now fully expressed by `source/`, `evidence/`, `derived/`, and `reflection/`.

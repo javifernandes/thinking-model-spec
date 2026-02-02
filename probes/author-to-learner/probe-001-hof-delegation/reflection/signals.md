@@ -1,5 +1,7 @@
 # Signals Detected
 
+<!-- moved to reflection/ to match the probe layer structure -->
+
 ## Signal A — Substitution Without Abstraction
 Learner substitutes syntax (`for` → `map`) without shifting intent framing.
 

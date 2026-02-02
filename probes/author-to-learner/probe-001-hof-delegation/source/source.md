@@ -1,5 +1,7 @@
 # Source Material
 
+<!-- moved to source/ to match the probe layer structure -->
+
 **Book:** Programming Core Thoughts  
 **Chapter:** Higher-Order Functions  
 **Section:** Delegation  

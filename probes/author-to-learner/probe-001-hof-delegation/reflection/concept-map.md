@@ -26,6 +26,10 @@ Procedural (“how”) → Declarative (“what”)
 ### Responsibility Axis
 Caller owns loop → Function owns loop
 
+**maps_to (system axis):** ownership
+
+**axis_id (book axis):** pct.responsibility
+
 ### Temporal Axis
 Repeated local logic → Reusable abstraction
 

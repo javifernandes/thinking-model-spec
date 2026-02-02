@@ -1,0 +1,51 @@
+# Probe Schema (v0.1)
+#
+# Layer: Vision / Methodology
+#
+# Purpose:
+# - Make the "probe" concept operational without turning it into an implementation.
+# - Provide a consistent manifest structure so probe folders can be reviewed, compared,
+#   and promoted-from.
+#
+# Note:
+# - This is not a runtime schema.
+# - This schema describes the *shape of a probe instance/manifest*.
+
+$schema_id: probe.schema.v0.1
+$schema_version: 0.1.0
+
+probe:
+  id: string
+  title: string
+  probe_type: string               # e.g. author-to-learner | ai-simulation | content-derivation
+
+  purpose: string
+  scope:
+    domain: string                 # e.g. programming
+    primary_concepts: [string]     # concept ids or names
+    session_size: string           # e.g. short | medium | long
+  anti_goals: [string]
+
+  inputs:
+    - kind: string                 # prose | chapter-fragment | concept-id | exercise-template | ...
+      ref: string                  # filepath or identifier
+
+  outputs:
+    evidence: [string]             # filepaths
+    derived: [string]              # filepaths
+    reflection: [string]           # filepaths
+
+  candidates:
+    concepts: [string]             # filepaths to draft concept nodes (book-level)
+    motifs: [string]               # filepaths to draft motifs (book-level)
+    axes: [string]                 # filepaths to draft axes (book-level)
+
+  promotion_decisions:
+    - decision: string             # promote | defer | reject
+      target: string               # filepath or id
+      rationale: string
+
+  status:
+    state: string                  # draft | completed | archived
+    last_updated: string           # ISO date
+

@@ -1,0 +1,67 @@
+$schema_id: probe.instance.v0.1
+$schema_ref: ../probe.schema.yaml
+
+probe:
+  id: ai-simulation
+  title: AI-Assisted Simulation (Author → Learner → Signals)
+  probe_type: ai-simulation
+
+  purpose: >
+    Stress-test the thinking model by simulating a learner attempting exercises derived from prose,
+    using an AI agent to interpret attempts and extract signals (misapplications, motifs, timing).
+
+  description: >
+    This probe instance is a “Wizard of Oz” learning-loop simulation.
+
+    The workflow is:
+    1) An author writes a small chapter fragment / concept explanation.
+    2) Exercises are derived (manually or with AI assistance).
+    3) A learner attempt is simulated (or captured from a real learner).
+    4) An AI agent interprets the attempt, looking for:
+       - acquisition motifs
+       - misapplications / anti-patterns
+       - axis confusions
+       - time-to-resolution signals
+    5) The probe outputs *structured* detections (feedback events with evidence), plus author-facing reflection.
+
+    Key methodological point:
+    - The purpose is not correctness, but to discover what the model fails to anticipate.
+    - Outputs are non-authoritative by default; promotion requires explicit author review.
+
+  scope:
+    domain: programming
+    primary_concepts:
+      - hof.core
+    session_size: short
+
+  anti_goals:
+    - Production UX
+    - Tooling architecture commitments
+    - Automated promotion without author review
+
+  inputs:
+    - kind: probe-run
+      ref: thinking-model-spec/probes/author-to-learner/probe-001-hof-delegation/
+
+  outputs:
+    evidence:
+      - thinking-model-spec/probes/author-to-learner/probe-001-hof-delegation/evidence/
+    derived:
+      - thinking-model-spec/probes/author-to-learner/probe-001-hof-delegation/derived/
+    reflection:
+      - thinking-model-spec/probes/author-to-learner/probe-001-hof-delegation/reflection/
+
+  candidates:
+    concepts:
+      - thinking-model-spec/books/programming-core-thoughts/concepts/hof.delegation.yaml
+    motifs:
+      - thinking-model-spec/books/programming-core-thoughts/catalogs/motifs/pct.substitution.yaml
+      - thinking-model-spec/books/programming-core-thoughts/catalogs/motifs/pct.branching-workaround.yaml
+    axes:
+      - thinking-model-spec/books/programming-core-thoughts/catalogs/axes/pct.responsibility.yaml
+
+  promotion_decisions: []
+
+  status:
+    state: completed
+    last_updated: 2026-02-01

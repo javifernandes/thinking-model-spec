@@ -1,0 +1,39 @@
+$schema_id: acquisition-motif.instance.v0.1
+$schema_ref: ../../schemas/acquisition-motif.schema.yaml
+
+acquisition_motif:
+  id: pct.substitution
+  name: Substitution (Surface Refactor)
+  gesture: "I’ll swap the surface form; the meaning stays the same."
+
+  description: >
+    The learner replaces one syntactic construct with another (e.g. `for` → `map`) while keeping
+    a procedural framing and not perceiving the intended intent/axis shift. This can look like progress
+    but may bypass the conceptual move.
+
+  appears_in:
+    - domain: programming
+      example: Replacing loops with `map` while still thinking in step-by-step mechanics
+
+  failure_modes:
+    - description: Concept bypass (exercise “solved” without acquiring the intended abstraction)
+
+  detection_signals:
+    - pattern: mechanical rewrite without change in intent language
+      context: code
+    - pattern: learner describes `map` as “just a loop with a function inside”
+      context: dialogue
+
+  pedagogical_stance: >
+    Acknowledge the refactor, then redirect attention to what varies vs what stays stable,
+    and surface the intended axis (delegation / semantic-weight) rather than mechanics.
+
+  metadata:
+    status: draft
+    version: 0.1.0
+    provenance:
+      discovered_in_probe: probe-001-hof-delegation
+      source_refs:
+        - thinking-model-spec/probes/author-to-learner/probe-001-hof-delegation/signals.md
+        - thinking-model-spec/probes/author-to-learner/probe-001-hof-delegation/learner-sim.md
+

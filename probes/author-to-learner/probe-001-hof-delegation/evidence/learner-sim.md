@@ -1,5 +1,7 @@
 # Learner Simulation
 
+<!-- moved to evidence/ to match the probe layer structure -->
+
 This file documents simulated learner behavior while engaging with the generated learning experience.
 
 ## Learner Profile (Assumed)

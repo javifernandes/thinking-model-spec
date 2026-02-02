@@ -1,0 +1,37 @@
+$schema_id: acquisition-motif.instance.v0.1
+$schema_ref: ../../schemas/acquisition-motif.schema.yaml
+
+acquisition_motif:
+  id: pct.branching-workaround
+  name: Branching Workaround (Interpret-Choices-Later)
+  gesture: "I’ll enumerate cases and pick one with branches."
+
+  description: >
+    The learner encodes variation via control flow (if/else, switch) rather than reifying behavior
+    as a value. This is often a transitional move (near-miss) and can indicate readiness for delegation.
+
+  appears_in:
+    - domain: programming
+      example: Selecting behavior by `player_type` branches inside a stable engine
+
+  failure_modes:
+    - description: Case explosion and tight coupling between engine and variations
+
+  detection_signals:
+    - pattern: if/else on mode or type to select behavior
+      context: code
+    - pattern: learner justifies branching as “clearer what each player does”
+      context: dialogue
+
+  pedagogical_stance: >
+    Treat as a productive near-miss: identify the stable engine vs variable behavior,
+    then offer delegation-as-value as a way to keep clarity without encoding choices in branches.
+
+  metadata:
+    status: draft
+    version: 0.1.0
+    provenance:
+      discovered_in_probe: probe-001-hof-delegation
+      source_refs:
+        - thinking-model-spec/probes/author-to-learner/probe-001-hof-delegation/generated/simulated-learner-attempt.md
+

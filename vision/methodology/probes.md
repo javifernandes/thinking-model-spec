@@ -105,9 +105,9 @@ However, **nothing in a probe is authoritative** by default.
 
 ---
 
-## Example: AI-Assisted Simulation as a Probe
+## Example: AI-Assisted Simulation as a Probe (Instance)
 
-One early probe consisted of:
+One early probe instance consisted of:
 - simulating a learner solving exercises
 - using an AI agent to interpret attempts
 - detecting anti-patterns, delays, and misapplications
@@ -122,6 +122,17 @@ These insights informed:
 - the feedback-space model
 - acquisition motifs
 - concept-family distinctions
+
+### Why this is an instance (not part of the definition)
+
+The definition of what a probe *is* lives in this document.
+
+Concrete probe instances are tracked separately as manifests:
+
+- [`vision/methodology/probe.schema.yaml`](probe.schema.yaml)
+- [`vision/methodology/probes/instances/ai-simulation.yaml`](probes/instances/ai-simulation.yaml)
+
+The AI-assisted simulation is not defined in a separate prose document; its explanation lives in the instance manifest.
 
 ---
 

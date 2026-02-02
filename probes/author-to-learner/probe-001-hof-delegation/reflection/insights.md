@@ -1,5 +1,7 @@
 # Insights & Consequences
 
+<!-- moved to reflection/ to match the probe layer structure -->
+
 ## Validated Assumptions
 - Prose can be transformed into structured learning entities
 - Learner misconceptions emerge predictably

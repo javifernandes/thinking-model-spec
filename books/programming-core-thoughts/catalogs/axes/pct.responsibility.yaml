@@ -1,0 +1,20 @@
+# Axis definition (book-level)
+
+axis:
+  id: pct.responsibility
+  name: Responsibility (caller vs abstraction)
+  description: >
+    Where does responsibility for the mechanics live?
+    Example: caller owns the loop vs the higher-order function owns the loop.
+
+  maps_to: ownership
+
+  examples:
+    - "Caller owns loop → Function owns loop"
+
+  metadata:
+    status: draft
+    version: 0.1.0
+    provenance:
+      discovered_in_probe: probe-001-hof-delegation
+

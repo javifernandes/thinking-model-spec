@@ -1,0 +1,51 @@
+# Probe-derived feedback events (draft)
+
+$schema_id: feedback-event.collection.v0.1
+$schema_ref: ../../../../system/schemas/feedback-event.schema.yaml
+
+feedback_events:
+  - feedback_event:
+      timestamp: 2026-02-01
+      event_type: antipattern
+      signal: branching-on-type
+      concepts_involved:
+        - hof.delegation
+      motifs_detected:
+        - pct.branching-workaround
+      context:
+        kind: exercise
+        ref: hof-delegation-001
+      source: ai_tutor
+      confidence: 0.8
+      evidence:
+        - kind: dialogue-turn
+          content: |
+            I’ll write a `play` function that checks the player type.
+
+            If player is random, do random.
+            If defensive, check defensive moves.
+            If capture, check capture moves.
+
+            That way it’s clear what each player does.
+      suggested_author_actions:
+        - promote-to-exercise
+        - promote-to-model
+
+  - feedback_event:
+      timestamp: 2026-02-01
+      event_type: insight
+      signal: over-application
+      concepts_involved:
+        - hof.delegation
+      motifs_detected:
+        - M8
+      context:
+        kind: dialogue
+        ref: learner-sim
+      source: aggregate
+      confidence: 0.6
+      evidence:
+        - kind: dialogue-turn
+          content: "Learner attempts to replace all loops with `map`."
+      suggested_author_actions:
+        - promote-to-book

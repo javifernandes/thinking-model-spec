@@ -1,0 +1,90 @@
+# Concept Node: Delegation via Higher-Order Functions (hof.delegation)
+#
+# Status: candidate concept node discovered/validated via a probe run.
+# This lives in the book-domain concept set, but remains `draft` until explicitly promoted.
+
+$schema_id: concept-node.instance.v0.1
+$schema_ref: ../../../system/schemas/concept-node.schema.yaml
+
+concept_node:
+  id: hof.delegation
+  name: Delegation (via Higher-Order Functions)
+  domain: programming
+
+  short_description: >
+    Use behavior-as-value to delegate a varying decision or transformation to a supplied function,
+    keeping a stable process/engine free of branching and mode flags.
+
+  concept_type: pattern
+  domain_tags:
+    - programming-abstractions
+    - functional
+    - delegation
+  level: 3
+
+  intent:
+    why_it_exists: >
+      Reduce coupling and premature commitment by externalizing variation.
+      Instead of encoding choices in control flow (branches) or structural hierarchies,
+      treat behavior as an explicit input.
+    threshold: >
+      You stop asking “which branch do I take?” and start asking “who decides, and when?”
+      This unlocks stable engines and clearer separation of intent vs mechanics.
+
+  acquisition:
+    mode: graded
+    levels:
+      - id: L0
+        label: unseen
+        description: Has not encountered delegation-as-variation pressure.
+      - id: L1
+        label: mechanical usage
+        description: Passes a function because told to, without understanding why.
+      - id: L2
+        label: intentional delegation
+        description: Chooses delegation to avoid branching / flag parameters.
+      - id: L3
+        label: design leverage
+        description: Uses delegation to shape system evolution and reduce coupling.
+
+  prerequisites:
+    explicit:
+      - hof.core
+    experiential:
+      - Friction from conditional logic growth (case/branch explosion)
+      - Seeing repeated loops that differ only by a small rule
+
+  meaning:
+    definition: >
+      Delegation via higher-order functions is the practice of parameterizing a process by behavior
+      (a function value) so that the process can remain stable while the delegated part varies.
+    informal_frames:
+      - Manager metaphor: delegate repetitive work, retain responsibility for intent
+      - Stable pipeline + injected step
+
+  implicit_mastery_signals:
+    - pattern: extraction of variation into a function parameter
+      description: Learner isolates what varies and expresses it as a passed-in behavior.
+    - pattern: elimination of branching modes
+      description: Learner replaces if/else or enum modes with behavior-as-value.
+
+  misapplication_patterns:
+    - id: branching-on-type
+      description: Uses conditionals instead of delegation to select behavior.
+      detection_signals:
+        - multiple branches selecting behavior
+      provenance: system
+      confidence: provisional
+      axis_violation: semantic-weight
+
+  metadata:
+    status: draft
+    version: 0.1.0
+    source_references:
+      - thinking-model-spec/probes/author-to-learner/probe-001-hof-delegation/source.md
+      - thinking-model-spec/probes/author-to-learner/probe-001-hof-delegation/generated/concept-node.hof.delegation.yaml
+    change_log:
+      - at: 2026-02-01
+        change: Introduced as a candidate concept node discovered via Probe 001.
+        source_of_change: learner behavior
+
