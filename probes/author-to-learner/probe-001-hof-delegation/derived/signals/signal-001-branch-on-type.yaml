@@ -1,0 +1,18 @@
+id: signal.hof.branch-on-type
+probe_id: probe-001-hof-delegation
+
+signal_type: misapplication
+
+description: >
+  Learner introduced conditional branching on player type
+  instead of passing behavior as a higher-order function.
+
+related_concepts:
+  - concept.higher-order-function
+  - concept.strategy
+
+raw_evidence: >
+  if (player_type == "random") { ... }
+  else if (player_type == "defensive") { ... }
+
+inferred: false

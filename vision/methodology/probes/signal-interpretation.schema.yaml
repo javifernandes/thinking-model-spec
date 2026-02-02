@@ -1,0 +1,36 @@
+id: signal-interpretation.schema.yaml
+version: 0.1
+
+type: object
+required:
+  - interpretation_id
+  - based_on_signals
+  - description
+  - related_concepts
+properties:
+  interpretation_id:
+    type: string
+
+  based_on_signals:
+    type: array
+    items:
+      type: string
+
+  description:
+    type: string
+
+  related_concepts:
+    type: array
+    items:
+      type: string
+
+  related_axes:
+    type: array
+    items:
+      type: string
+
+  acquisition_motif:
+    type: string
+
+  confidence:
+    type: number

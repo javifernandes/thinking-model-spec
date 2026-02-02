@@ -1,0 +1,24 @@
+id: insight.hof.branching-vs-delegation
+probe_id: probe-001-hof-delegation
+
+insight_type: learner-behavior
+
+description: >
+  Learners tend to preserve control flow in the caller
+  when first encountering higher-order functions,
+  replacing abstraction with conditional branching.
+
+related_concepts:
+  - concept.higher-order-function
+  - concept.strategy
+
+related_capability_gaps:
+  - capability-gap.learner-orientation.behavior-location
+
+implications:
+  - Learner-facing material should make the *movement of behavior*
+    explicit, not just the syntax.
+  - Feedback should name the pattern: "you kept the decision instead
+    of delegating it".
+
+confidence: high

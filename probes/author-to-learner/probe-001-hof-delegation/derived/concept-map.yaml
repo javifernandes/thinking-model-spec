@@ -1,0 +1,22 @@
+probe_id: probe-001-hof-delegation
+
+primary_concept: hof
+
+derived_concepts:
+  - concept_id: delegation
+    role: subconcept
+
+concept_families:
+  - control-abstractions
+
+activated_axes:
+  - axis_id: semantic_weight
+    description: procedural → declarative
+  - axis_id: responsibility
+    description: caller owns loop → function owns loop
+  - axis_id: temporal
+    description: local logic → reusable abstraction
+
+observations:
+  - Chapter activates axes implicitly without naming them
+  - Learner confusion clusters at axis boundaries

@@ -1,0 +1,49 @@
+id: derived-concept-map.schema.yaml
+version: 0.1
+
+type: object
+required:
+  - probe_id
+  - primary_concept
+  - derived_concepts
+  - activated_axes
+properties:
+  probe_id:
+    type: string
+
+  primary_concept:
+    type: string
+    description: Canonical concept node under examination
+
+  derived_concepts:
+    type: array
+    items:
+      type: object
+      required: [concept_id, role]
+      properties:
+        concept_id:
+          type: string
+        role:
+          type: string
+          enum: [subconcept, related, prerequisite, contrast]
+
+  concept_families:
+    type: array
+    items:
+      type: string
+
+  activated_axes:
+    type: array
+    items:
+      type: object
+      required: [axis_id, description]
+      properties:
+        axis_id:
+          type: string
+        description:
+          type: string
+
+  observations:
+    type: array
+    items:
+      type: string

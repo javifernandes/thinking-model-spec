@@ -1,0 +1,26 @@
+- signal_id: substitution-without-abstraction
+  description: Learner replaces syntax without shifting intent
+  detected_in: probe-001-hof-delegation
+  acquisition_motif: substitution
+  anti_pattern: surface-refactor
+  related_axes:
+    - semantic_weight
+  severity: medium
+
+- signal_id: delegation-overreach
+  description: Learner delegates universally, ignoring control needs
+  detected_in: probe-001-hof-delegation
+  acquisition_motif: overgeneralization
+  anti_pattern: abstraction-absolutism
+  related_axes:
+    - responsibility
+  severity: high
+
+- signal_id: temporal-axis-confusion
+  description: Learner extends lifetime of delegated behavior incorrectly
+  detected_in: probe-001-hof-delegation
+  acquisition_motif: scope-extension
+  anti_pattern: lifetime-leak
+  related_axes:
+    - temporal
+  severity: high

@@ -1,0 +1,13 @@
+- gap_id: lack-of-axis-visibility
+  discovered_in: probe-001-hof-delegation
+  description: Learner cannot see which axis is being exercised at a given moment
+  affected_capability: concept-context-visibility
+  suggested_resolution: UI should surface active axes during exercises
+  priority: high
+
+- gap_id: contrast-generation-missing
+  discovered_in: probe-001-hof-delegation
+  description: System repeats similar examples instead of contrasting misuse
+  affected_capability: adaptive-exercise-generation
+  suggested_resolution: Generate counter-examples targeting over-application
+  priority: high
