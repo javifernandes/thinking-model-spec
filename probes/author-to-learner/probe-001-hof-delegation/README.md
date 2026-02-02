@@ -33,6 +33,31 @@ This probe validates whether:
 
 This probe is an **instance** of the probing methodology described in `/vision/methodology`.
 
+## Execution model
+
+This probe is designed to be *runnable*.
+
+It does not prescribe an implementation, but it requires
+a set of capabilities that together enable its execution.
+
+## Required capabilities and fulfillment
+
+| Capability | How it is fulfilled in this probe |
+|----------|-----------------------------------|
+| present-content | The source chapter excerpt is presented to the learner via `source/source.md` |
+| capture-free-text | Learner responses are simulated and recorded in `evidence/learner-sim.md` |
+| interpret-with-llm | Interpretation is performed via AI-assisted analysis during probe execution |
+| emit-feedback-event | Feedback signals are captured in `derived/feedback-events.yaml` |
+
+## Simulation note
+
+This probe is executed using a Wizard-of-Oz approach.
+
+Human and AI interpretation temporarily fulfill
+capabilities that may later be implemented as tools.
+The probe remains valid regardless of implementation.
+
+
 ## Status
 Completed (manual simulation)
 

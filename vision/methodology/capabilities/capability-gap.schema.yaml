@@ -1,0 +1,96 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+title: CapabilityGap
+description: >
+  A Capability Gap represents an observed mismatch between what a probe
+  execution required in order to be faithful and what the current
+  methodology, specifications, or tooling could provide.
+
+type: object
+required:
+  - id
+  - title
+  - description
+  - category
+  - target_layer
+  - severity
+
+properties:
+  id:
+    type: string
+    description: >
+      Globally unique identifier for the capability gap.
+      Recommended format: capability-gap.<short-name>
+
+  title:
+    type: string
+    description: >
+      Short human-readable name of the gap.
+
+  description:
+    type: string
+    description: >
+      Precise description of the gap as observed during probe execution.
+      Must describe the pressure or limitation, not a solution.
+
+  category:
+    type: string
+    enum:
+      - content-presentation
+      - learner-orientation
+      - interaction
+      - feedback-detection
+      - signal-capture
+      - authoring
+      - simulation-fidelity
+      - methodology
+      - tooling
+    description: >
+      Broad category of the capability gap.
+
+  target_layer:
+    type: string
+    enum:
+      - methodology
+      - system
+      - tooling
+    description: >
+      The layer where this gap ultimately needs to be addressed.
+
+  severity:
+    type: string
+    enum:
+      - low
+      - medium
+      - high
+      - blocking
+    description: >
+      How strongly this gap impacts probe realism or insight quality.
+
+  blocks_realism:
+    type: boolean
+    default: false
+    description: >
+      Whether this gap prevents the probe from being considered faithful.
+
+  observed_in:
+    type: array
+    items:
+      type: string
+    description: >
+      List of probe IDs where this gap was observed.
+
+  notes:
+    type: array
+    items:
+      type: string
+    description: >
+      Optional clarifications, examples, or contextual notes.
+
+  status:
+    type: string
+    enum:
+      - open
+      - acknowledged
+      - mitigated
+      - obsolete
+    default: open
