@@ -49,3 +49,10 @@ probe:
     state: string                  # draft | completed | archived
     last_updated: string           # ISO date
 
+  capabilities:
+    type: array
+    items:
+      type: string
+    description: >
+      List of capability IDs required to execute this probe
+

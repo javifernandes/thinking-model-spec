@@ -12,3 +12,8 @@ probe:
     - manual extraction
     - simulated learner attempt
     - manual signal detection
+  capabilities:
+    - present-content
+    - capture-free-text
+    - interpret-with-llm
+    - emit-feedback-event
