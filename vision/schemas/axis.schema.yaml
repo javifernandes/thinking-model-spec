@@ -1,0 +1,53 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+title: Axis
+description: >
+  An axis defines a named dimension of meaningful variation within a system.
+  Axes are system-agnostic abstractions that may be specialized by systems,
+  domains, or artifacts.
+
+type: object
+required:
+  - id
+  - name
+  - description
+properties:
+  id:
+    type: string
+    description: Unique identifier for the axis
+    pattern: "^[a-z0-9\\-]+$"
+
+  name:
+    type: string
+    description: Human-readable name of the axis
+
+  description:
+    type: string
+    description: >
+      Concise explanation of what varies along this axis,
+      without referencing any specific system or domain.
+
+  polarity:
+    type: object
+    description: Optional description of extremes or bounds
+    properties:
+      low:
+        type: string
+        description: Description of one extreme
+      high:
+        type: string
+        description: Description of the opposite extreme
+    additionalProperties: false
+
+  scope:
+    type: string
+    enum: [vision, system, domain, artifact]
+    description: >
+      Declares where this axis is intended to be defined.
+      Vision-level axes are abstract; others are specializations.
+
+  specializes:
+    type: string
+    description: >
+      Optional reference to another axis id that this axis specializes.
+
+additionalProperties: false

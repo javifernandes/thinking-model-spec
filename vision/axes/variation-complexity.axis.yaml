@@ -1,0 +1,11 @@
+$schema: vision/axes/axis.schema.yaml
+
+id: variation-complexity
+name: Variation / Complexity
+description: >
+  Degree of structural or conceptual complexity present in an experience
+  or artifact.
+
+polarity:
+  low: Simple, uniform, or predictable structures
+  high: Complex, varied, or highly structured compositions

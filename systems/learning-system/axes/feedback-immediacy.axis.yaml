@@ -1,0 +1,13 @@
+$schema: systems/learning-system/axes/system-axis.schema.yaml
+
+id: feedback-immediacy
+name: Feedback Immediacy
+description: >
+  Temporal distance between learner actions and feedback
+  produced by the learning system.
+
+specializes: temporal-proximity
+
+polarity:
+  low: Delayed or indirect feedback
+  high: Immediate and explicit feedback

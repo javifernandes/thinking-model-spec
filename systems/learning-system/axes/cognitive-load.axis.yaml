@@ -1,0 +1,13 @@
+$schema: systems/learning-system/axes/system-axis.schema.yaml
+
+id: cognitive-load
+name: Cognitive Load
+description: >
+  Degree of mental effort required from the learner to process
+  material or complete a task.
+
+specializes: variation-complexity
+
+polarity:
+  low: Recognition, recall, or guided processing
+  high: Reasoning, synthesis, or problem solving

@@ -1,0 +1,11 @@
+$schema: vision/axes/axis.schema.yaml
+
+id: abstraction
+name: Abstraction
+description: >
+  Degree to which meaning is expressed through general principles
+  versus concrete instances.
+
+polarity:
+  low: Concrete, specific, instance-based
+  high: Abstract, general, principle-based

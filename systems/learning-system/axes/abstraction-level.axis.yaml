@@ -1,0 +1,13 @@
+$schema: systems/learning-system/axes/system-axis.schema.yaml
+
+id: abstraction-level
+name: Abstraction Level
+description: >
+  Degree to which learning material emphasizes general concepts
+  versus concrete examples.
+
+specializes: abstraction
+
+polarity:
+  low: Examples, cases, demonstrations
+  high: Concepts, principles, formal models

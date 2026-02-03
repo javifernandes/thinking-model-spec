@@ -1,0 +1,27 @@
+$schema: http://json-schema.org/draft-07/schema#
+$id: vision/axes/axis.schema.yaml
+
+title: Vision Axis
+description: >
+  An axis represents a dimension of variation along which
+  experiences, artifacts, or interactions may differ.
+
+type: object
+required:
+  - id
+  - name
+  - description
+  - polarity
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  description:
+    type: string
+  polarity:
+    type: object
+    description: >
+      Defines the conceptual extremes of the axis.
+    additionalProperties:
+      type: string

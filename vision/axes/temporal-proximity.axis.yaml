@@ -1,0 +1,11 @@
+$schema: vision/axes/axis.schema.yaml
+
+id: temporal-proximity
+name: Temporal Proximity
+description: >
+  Temporal distance between an action and its observable consequence
+  within a system.
+
+polarity:
+  low: Consequences are delayed or indirect
+  high: Consequences are immediate and explicit

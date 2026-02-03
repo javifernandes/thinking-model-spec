@@ -1,0 +1,13 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+title: Axis Set
+description: A collection of axis definitions.
+
+type: object
+required:
+  - axes
+properties:
+  axes:
+    type: array
+    items:
+      $ref: "./axis.schema.yaml"
+additionalProperties: false
